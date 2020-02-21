@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+
+dubbo:
+  application:
+    #Ӧ�����ƣ�ÿ��dubboӦ�õ����ƶ���Ψһ��
+    name: dubbo-consumer
+  registry:
+    #ע������
+    address: zookeeper://127.0.0.1:2181
+    port: 20890
+  scan:
+    #ɨ�����ע��bean,��serviceʵ�������ڵİ�
+    basePackages: com.example.dubboconsumer.controller
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cakeordersystem?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    username: greiz
+    password: wade123456
